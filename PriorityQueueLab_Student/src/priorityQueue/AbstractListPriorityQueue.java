@@ -63,7 +63,9 @@ public abstract class AbstractListPriorityQueue<K, V> extends AbstractPriorityQu
 	
 	@Override
 	public Entry<K, V> removeMin() {
-		return list.remove(minEntryIndex()); 
+		if(!list.isEmpty())
+			return list.remove(minEntryIndex()); 
+		return null;
 	}
 
 }
