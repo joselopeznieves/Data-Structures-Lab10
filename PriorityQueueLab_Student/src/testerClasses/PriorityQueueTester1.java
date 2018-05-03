@@ -21,8 +21,8 @@ public class PriorityQueueTester1 {
 		//When the comparator is changed to Comparator2, the elements in the PQ are removed from the highest, to the lowest
 		//this is due to the fact that the comparison now returns the opposite results, and the priority queue reflects 
 		//these priorities accordingly
-		DisplayablePriorityQueue<Integer, String> pq = new UnsortedListPriorityQueue<>(new IntegerComparator2());  //1
-		//DisplayablePriorityQueue<Integer, String> pq = new SortedListPriorityQueue<>(new IntegerComparator1());  //2
+		//DisplayablePriorityQueue<Integer, String> pq = new UnsortedListPriorityQueue<>(new IntegerComparator2());  //1
+		DisplayablePriorityQueue<Integer, String> pq = new SortedListPriorityQueue<>(new IntegerComparator1());  //2
 		//DisplayablePriorityQueue<Integer, String> pq = new HeapListPriorityQueue<>(new IntegerComparator1());    //3
 		//DisplayablePriorityQueue<Integer, String> pq = new HeapPriorityQueue<>(new IntegerComparator1());        //4
 

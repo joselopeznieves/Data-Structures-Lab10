@@ -29,7 +29,11 @@ public class SortedListPriorityQueue<K, V> extends AbstractListPriorityQueue<K, 
 		int curr = list.size()-1; 
 		while (curr >= 0  && compare(list.get(curr), newest) > 0)
 			curr--; 
-		list.add(curr, newest); 
+		if(list.isEmpty()) {
+			list.add(newest);
+			return newest;
+		}
+		list.add(curr+1, newest); 
 		return newest; 
 	}
 
